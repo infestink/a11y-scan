@@ -1,0 +1,19 @@
+# Curated list of public URLs scanned nightly.
+# Each entry: url (required), label (display name), max_pages (default 1).
+
+targets:
+  - url: https://www.w3.org/WAI/demos/bad/before/home.html
+    label: W3C BAD demo (before)
+    max_pages: 3
+
+  - url: https://www.w3.org/WAI/demos/bad/after/home.html
+    label: W3C BAD demo (after — should be clean)
+    max_pages: 3
+
+  - url: https://dequeuniversity.com/demo/mars/
+    label: Deque Mars demo
+    max_pages: 1
+
+  - url: https://govuk-accessibility-testing-sample.netlify.app/
+    label: GOV.UK sample (external fixture)
+    max_pages: 2

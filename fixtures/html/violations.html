@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+  INTENTIONAL ACCESSIBILITY VIOLATIONS — for test purposes only.
+  Do NOT use this page as a template for real content.
+
+  Seeded violations (axe rule IDs):
+    image-alt          — <img> missing alt attribute
+    label              — <input> without associated <label>
+    color-contrast     — low-contrast text (#aaa on #fff)
+    heading-order      — h4 follows h1 (skips h2, h3)
+    empty-heading      — <h2> with no text content
+    button-name        — <button> with no accessible name
+    link-name          — <a> with no accessible name
+    html-has-lang      — <html> missing lang attribute (note: declared below but value is empty)
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Violations fixture — seeded a11y issues</title>
+  <style>
+    .low-contrast { color: #aaaaaa; background: #ffffff; }
+  </style>
+</head>
+<body>
+
+  <h1>Violations demo page</h1>
+
+  <!-- image-alt: missing alt -->
+  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+
+  <!-- label: input not associated with a label -->
+  <input type="text" placeholder="Your name">
+
+  <!-- color-contrast: text too light -->
+  <p class="low-contrast">This text has insufficient colour contrast.</p>
+
+  <!-- heading-order: jumps from h1 to h4 -->
+  <h4>Skipped heading levels</h4>
+
+  <!-- empty-heading -->
+  <h2></h2>
+
+  <!-- button-name: no text, no aria-label -->
+  <button></button>
+
+  <!-- link-name: anchor with no accessible name -->
+  <a href="/somewhere"></a>
+
+  <!-- Valid content below this line to ensure the page still renders -->
+  <p>This page seeds known violations so the integration tests can assert
+     that the scanner detects specific axe rule violations.</p>
+
+</body>
+</html>

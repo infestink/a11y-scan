@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clean fixture — no violations</title>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header role="banner">
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="clean.html">Home</a></li>
+        <li><a href="violations.html">Violations demo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Accessible page fixture</h1>
+    <p>This page is intentionally free of accessibility violations and is used
+       to verify that the scanner correctly reports zero violations on clean pages.</p>
+
+    <section aria-labelledby="sec-images">
+      <h2 id="sec-images">Images</h2>
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+           alt="1×1 transparent placeholder — intentionally minimal">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+           alt="" role="presentation">
+    </section>
+
+    <section aria-labelledby="sec-form">
+      <h2 id="sec-form">Form</h2>
+      <form>
+        <div>
+          <label for="name">Full name</label>
+          <input id="name" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="email">Email address</label>
+          <input id="email" type="email" autocomplete="email" required>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="sec-table">
+      <h2 id="sec-table">Data table</h2>
+      <table>
+        <caption>Sample results</caption>
+        <thead>
+          <tr>
+            <th scope="col">Rule</th>
+            <th scope="col">Severity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>image-alt</td>
+            <td>critical</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>a11y-scan test fixture</p>
+  </footer>
+</body>
+</html>

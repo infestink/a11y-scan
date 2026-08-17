@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+.env
+
+# Reports (generated output — sample kept via git add -f)
+reports/*
+!reports/.gitkeep
+!reports/sample_*.html
+!reports/sample_*.json
+
+# Data / database
+data/
+
+# Playwright
+test-results/
+playwright-report/
+
+# Coverage
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
